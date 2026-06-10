@@ -1,0 +1,78 @@
+@startuml sistema-noticias
+skinparam linetype ortho
+
+class Usuario {
+    -String dni
+    -String nombre
+}
+
+class Registro {
+    -datos.txt
+    +guardarTxt()
+    +actualizarTxt()
+}
+
+class Lector {
+    -int edad
+    +comentarNoticia()
+}
+
+class Autor {
+    -String medio
+    +publicarNoticia()
+}
+
+class Noticia {
+    -String titulo
+    -String detalle
+    -LocalDateTime fecha
+    -Autor autor
+}
+
+class Comentario {
+    -int numero
+    -String texto
+    -Lector lector
+}
+
+interface Comentarista {
+    +comentarNoticia()
+}
+
+interface Publicador {
+    +publicarNoticia()
+}
+
+class Sitio {
+    -ArrayList<Autor> autores
+    -ArrayList<Lector> lectores
+    -ArrayList<Noticia> noticias
+    -ArrayList<Comentario> comentarios
+    +listarNoticiasAño()
+    +listarNoticiasMes()
+    +mostrarNoticia()
+    +buscarPorAutor()
+    +registrarComentario()
+    +registrarAutor()
+    +registrarLector()
+    +registrarNoticia()
+}
+
+' Herencia
+Usuario <|-- Lector
+Usuario <|-- Autor
+
+' Interfaces
+Lector --|> Comentarista
+Autor --|> Publicador
+
+' Asociaciones principales
+Noticia "*" -- "1" Autor : es creada<
+Noticia "1" -- "* " Comentario : tiene<
+Comentario "*" -- "1" Lector
+Sitio "1 " -- "*" Noticia : >gestiona
+Registro "1   " -- "*" Noticia : guarda<
+
+
+
+@enduml
