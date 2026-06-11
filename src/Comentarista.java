@@ -1,3 +1,4 @@
-public class Comentarista {
+public interface Comentarista {
     
+    void comentarNoticia();    
 }
