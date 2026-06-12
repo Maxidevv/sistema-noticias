@@ -250,7 +250,7 @@ public class Sitio {
                 System.out.print("Ingrese el comentario: ");
                 String texto = scanner.nextLine();
 
-                Comentario nuevoComentario = new Comentario(texto, lector.getDni().hashCode(), lector);
+                Comentario nuevoComentario = new Comentario(texto, lector);
                 comentarios.add(nuevoComentario);
 
                 System.out.println("\n Comentario registrado exitosamente.");

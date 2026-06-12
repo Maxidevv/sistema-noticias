@@ -71,7 +71,7 @@ Noticia "*" -- "1" Autor : es creada<
 Noticia "1" -- "* " Comentario : tiene<
 Comentario "*" -- "1" Lector
 Sitio "1 " -- "*" Noticia : >gestiona
-Registro "1   " -- "*" Noticia : guarda<
+Registro "1   " -- "*" Sitio : >guarda
 
 
 
