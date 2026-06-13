@@ -2,12 +2,21 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.time.LocalDateTime;
 
+/**
+ * Clase Sitio que gestiona noticias, autores, lectores y comentarios
+ * @author Moyano Bustos, Darrull, Zalazar, Moncada
+ * @version 5.0
+ */
 public class Sitio {
     private ArrayList <Autor> autores;       
     private ArrayList <Lector> lectores;
     private ArrayList <Comentario> comentarios;
     private ArrayList <Noticia> noticias;
 
+    /**
+     * Constructor de la clase Sitio
+     * Inicializa los ArrayLists de autores, lectores, comentarios y noticias
+     */
     public Sitio() 
     {
         this.autores = new ArrayList<Autor>();
@@ -17,40 +26,67 @@ public class Sitio {
     }
 
     // Getters
+    /**
+     * @return lista de autores
+     */
     public ArrayList<Autor> getAutores() {
         return autores;
     }
 
+    /**
+     * @return lista de lectores
+     */
     public ArrayList<Lector> getLectores() {
         return lectores;
     }
 
+    /**
+     * @return lista de comentarios
+     */
     public ArrayList<Comentario> getComentarios() {
         return comentarios;
     }
 
+    /**
+     * @return lista de noticias
+     */
     public ArrayList<Noticia> getNoticias() {
         return noticias;
     }
 
     // Setters
+    /**
+     * @param autores lista de autores
+     */
     public void setAutores(ArrayList<Autor> autores) {
         this.autores = autores;
     }
 
+    /**
+     * @param lectores lista de lectores
+     */
     public void setLectores(ArrayList<Lector> lectores) {
         this.lectores = lectores;
     }
 
+    /**
+     * @param comentarios lista de comentarios
+     */
     public void setComentarios(ArrayList<Comentario> comentarios) {
         this.comentarios = comentarios;
     }
 
+    /**
+     * @param noticias lista de noticias
+     */
     public void setNoticias(ArrayList<Noticia> noticias) {
         this.noticias = noticias;
     }
 
-    // Métodos de gestión
+    // Metodos de gestion
+    /**
+     * Lista todas las noticias agrupadas por año
+     */
     public void listarNoticiasAño() {
         if (noticias.isEmpty()) {
             System.out.println("No hay noticias registradas.");
@@ -82,6 +118,9 @@ public class Sitio {
         }
     }
 
+    /**
+     * Lista noticias de un mes y año especifico
+     */
     public void listarNoticiasMes() {
         if (noticias.isEmpty()) {
             System.out.println("No hay noticias registradas.");
@@ -115,6 +154,9 @@ public class Sitio {
         }
     }
 
+    /**
+     * Muestra el detalle completo de una noticia seleccionada
+     */
     public void mostrarNoticia() {
         if (noticias.isEmpty()) {
             System.out.println("No hay noticias registradas.");
@@ -147,7 +189,7 @@ public class Sitio {
 
             ArrayList<Comentario> comentariosNoticia = new ArrayList<>();
             for (Comentario comentario : comentarios) {
-                // Se asume que el comentario está asociado a la noticia por el lector
+                // Se asume que el comentario esta asociado a la noticia por el lector
                 comentariosNoticia.add(comentario);
             }
 
@@ -165,6 +207,9 @@ public class Sitio {
         }
     }
 
+    /**
+     * Busca y lista todas las noticias de un autor especifico
+     */
     public void buscarPorAutor() {
         if (autores.isEmpty()) {
             System.out.println("No hay autores registrados.");
@@ -209,6 +254,9 @@ public class Sitio {
         }
     }
 
+    /**
+     * Registra un nuevo comentario de un lector en una noticia
+     */
     public void registrarComentario() {
         if (lectores.isEmpty()) {
             System.out.println("No hay lectores registrados.");
@@ -263,6 +311,9 @@ public class Sitio {
         }
     }
 
+    /**
+     * Registra un nuevo autor en el sistema
+     */
     public void registrarAutor() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("\n═════════════════════════════════════════");
@@ -285,10 +336,13 @@ public class Sitio {
         System.out.println("");
     }
 
+    /**
+     * Registra un nuevo lector en el sistema
+     */
     public void registrarLector() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("\n═════════════════════════════════════════");
-        System.out.println("        REGISTRAR NUEVO LECTOR");
+        System.out.println("        REGISTRAR NUEVO LECTOR"             );
         System.out.println("═════════════════════════════════════════\n");
 
         System.out.print("Nombre: ");
@@ -307,6 +361,9 @@ public class Sitio {
         System.out.println("");
     }
 
+    /**
+     * Registra una nueva noticia en el sistema
+     */
     public void registrarNoticia() {
         if (autores.isEmpty()) {
             System.out.println("No hay autores registrados. Debe registrar un autor primero.");
@@ -359,6 +416,10 @@ public class Sitio {
         }
     }
 
+    /**
+     * Metodo principal que ejecuta el menu interactivo del sistema
+     * @param args argumentos de linea de comandos
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Sitio sitio = new Sitio();

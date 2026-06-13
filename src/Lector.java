@@ -13,7 +13,7 @@ public class Lector extends Usuario implements Comentarista {
       * @param nombre El nombre del lector
      */
     public Lector(int edad, String dni, String nombre) {
-        super(dni, nombre);
+        super(nombre, dni);
         this.edad = edad;
     }
 

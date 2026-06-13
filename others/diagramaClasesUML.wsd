@@ -9,7 +9,6 @@ class Usuario {
 class Registro {
     -datos.txt
     +guardarTxt()
-    +actualizarTxt()
 }
 
 class Lector {
@@ -30,7 +29,6 @@ class Noticia {
 }
 
 class Comentario {
-    -int numero
     -String texto
     -Lector lector
 }
@@ -67,11 +65,11 @@ Lector --|> Comentarista
 Autor --|> Publicador
 
 ' Asociaciones principales
-Noticia "*" -- "1" Autor : es creada<
+Noticia "*" -- "1" Autor : >es creada
 Noticia "1" -- "* " Comentario : tiene<
 Comentario "*" -- "1" Lector
 Sitio "1 " -- "*" Noticia : >gestiona
-Registro "1   " -- "*" Sitio : >guarda
+Registro "1   " -- "*" Noticia : guarda<
 
 
 

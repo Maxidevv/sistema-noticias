@@ -1,7 +1,7 @@
 import java.time.LocalDateTime;
 
 /**
- * 
+ * Clase que representa una noticia con su título, detalle, fecha y autor.
  */
 public class Noticia {
     
