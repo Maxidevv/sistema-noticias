@@ -15,7 +15,7 @@ public class Registro {
      * Metodo privado para guardar en archivo de texto
      * @param nombreArchivo nombre del archivo a guardar
      * @param nombre nombre del autor
-     * @param medio medio de publicación
+     * @param medio medio de publicacion
      * @param titulo titulo de la noticia
      * @param detalle detalle de la noticia
      * @param fecha fecha de la noticia
@@ -25,9 +25,9 @@ public class Registro {
         try {
             FileWriter writer = new FileWriter(nombreArchivo, true);
             if (!archivo) {
-                writer.write("====================\n\n");
+                writer.write("====================\n");
                 writer.write("REGISTRO DE NOTICIAS\n");
-                writer.write("====================\n\n");
+                writer.write("====================\n");
             }
             writer.write("Autor: " + nombre + "\n");
             writer.write("Medio: " + medio + "\n");
@@ -45,7 +45,7 @@ public class Registro {
     /**
      * Metodo publico para guardar noticia en datos.txt
      * @param nombre nombre del autor
-     * @param medio medio de publicación
+     * @param medio medio de publicacion
      * @param titulo titulo de la noticia
      * @param detalle detalle de la noticia
      * @param fecha fecha de la noticia

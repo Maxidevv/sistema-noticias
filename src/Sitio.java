@@ -8,6 +8,7 @@ import java.time.LocalDateTime;
  * @version 5.0
  */
 public class Sitio {
+    private Registro registro;
     private ArrayList <Autor> autores;       
     private ArrayList <Lector> lectores;
     private ArrayList <Comentario> comentarios;
@@ -23,6 +24,7 @@ public class Sitio {
         this.lectores = new ArrayList<Lector>();
         this.comentarios = new ArrayList<Comentario>();
         this.noticias = new ArrayList<Noticia>();
+        this.registro = new Registro();
     }
 
     // Getters
@@ -407,6 +409,8 @@ public class Sitio {
             LocalDateTime fecha = LocalDateTime.of(año, mes, dia, hora, minuto);
             Noticia nuevaNoticia = new Noticia(titulo, detalle, fecha, autor);
             noticias.add(nuevaNoticia);
+            
+            registro.registrarNoticia(autor.getNombre(), autor.getMedio(), titulo, detalle, fecha);
 
             System.out.println("\n Noticia registrada exitosamente.");
             System.out.println("");
