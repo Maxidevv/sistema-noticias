@@ -1,7 +1,8 @@
 Proyecto academico donde se creo un sistema de noticias con el lenguaje POO Java.
 
+
 Integrantes:
-- Maxi Moncada
-- Matias Moyano
-- Farid Darrull
-- Maximo Zalazar
+- Maxi Moncada (maxilucianomoncada@gmail.com)
+- Matias Moyano (matiasmoyanobustos@gmail.com)
+- Maximo Zalazar (mzalazar474@alumnos.iua.edu.ar)
+- Farid Darrull (fdarrull302@alumnos.iua.edu.ar)
