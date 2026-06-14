@@ -36,7 +36,7 @@ public class Noticia {
 
     /**
      * Obtiene el detalle o cuerpo de la noticia.
-     * * @return El detalle de la noticia.
+     * @return El detalle de la noticia.
      */
     public String getDetalle() {
         return detalle;
@@ -44,7 +44,7 @@ public class Noticia {
 
     /**
      * Obtiene la fecha y hora de la noticia.
-     * * @return Un objeto con la fecha de la noticia.
+     * @return Un objeto con la fecha de la noticia.
      */
     public LocalDateTime getFecha() {
         return fecha;
@@ -52,7 +52,7 @@ public class Noticia {
 
     /**
      * Obtiene el autor de la noticia.
-     * * @return El autor de la noticia.
+     * @return El autor de la noticia.
      */
     public Autor getAutor() {
         return autor;
@@ -60,7 +60,7 @@ public class Noticia {
 
     /**
      * Modifica el título de la noticia.
-     * * @param titulo El nuevo título para la noticia.
+     * @param titulo El nuevo título para la noticia.
      */
     public void setTitulo(String titulo) {
         this.titulo = titulo;
@@ -68,7 +68,7 @@ public class Noticia {
 
     /**
      * Modifica el detalle o cuerpo de la noticia.
-     * * @param detalle El nuevo detalle para la noticia.
+     * @param detalle El nuevo detalle para la noticia.
      */
     public void setDetalle(String detalle) {
         this.detalle = detalle;
@@ -76,7 +76,7 @@ public class Noticia {
 
     /**
      * Modifica la fecha y hora de la noticia.
-     * * @param fecha fecha y hora de noticia.
+     * @param fecha fecha y hora de noticia.
      */
     public void setFecha(LocalDateTime fecha) {
         this.fecha = fecha;
@@ -84,7 +84,7 @@ public class Noticia {
 
    /**
      * Modifica el autor de la noticia.
-     * * @param autor El autor de la noticia.
+     * @param autor El autor de la noticia.
      */
     public void setAutor(Autor autor) {
         this.autor = autor;
