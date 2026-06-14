@@ -44,7 +44,7 @@ public class Noticia {
 
     /**
      * Obtiene la fecha y hora de la noticia.
-     * @return Un objeto con la fecha de la noticia.
+     * @return La fecha de la noticia.
      */
     public LocalDateTime getFecha() {
         return fecha;
