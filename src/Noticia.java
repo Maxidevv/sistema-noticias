@@ -14,7 +14,7 @@ public class Noticia {
 
     /**
      * Constructor completo para crear una instancia de Noticia.
-     * * @param titulo  El título que tendrá la noticia.
+     * @param titulo  El título que tendrá la noticia.
      * @param detalle El contenido o cuerpo de la noticia.
      * @param fecha   La fecha y hora de creación/publicación.
      * @param autor   El objeto Autor asociado a la noticia.
@@ -28,7 +28,7 @@ public class Noticia {
     
     /**
      * Obtiene el título de la noticia.
-     * * @return El título de la noticia.
+     * @return El título de la noticia.
      */
     public String getTitulo() {
         return titulo;
