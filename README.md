@@ -1,5 +1,5 @@
 Proyecto academico donde se creo un sistema de noticias con el lenguaje POO Java.
-
+Repositorio del proyecto: https://github.com/Maxidevv/sistema-noticias
 
 Integrantes:
 - Maxi Moncada (maxilucianomoncada@gmail.com)
